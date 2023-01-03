@@ -119,16 +119,19 @@ public class MainAPP {
 		CustomWait.hardWait(3000);
 		element.byText(driver, "Next", null).click();
 		try {
+			element.byName(driver, "password", null).sendKeys(pass);
+		} catch (Exception e) {
 			WebElement verifyUserAcc = element.byText(driver, "Enter your phone number or username", 10);
 			if (verifyUserAcc.isDisplayed()) {
 				LOG.logger("Verify account is displayed reeeee");
 				element.byCss(driver, "[name='text']", null).sendKeys("masterhommy");
 				element.retryingFindClick(driver, "//*[text()='Next']");
 			}
-		} catch (Exception e) {
+
+			element.byName(driver, "password", null).sendKeys(pass);
 			// TODO: handle exception
 		}
-		element.byName(driver, "password", null).sendKeys(pass);
+		
 		CustomWait.hardWait(null);
 		WebElement loginButtonIsEnabled = element.byText(driver, "Log in", null);
 		if (loginButtonIsEnabled.isEnabled()) {
@@ -171,8 +174,8 @@ public class MainAPP {
 			WebElement replyButton = element.byText(driver, "Reply", 10);
 			if (replyButton.isEnabled()) {
 				element.retryingFindClick(driver, "//*[text()='Reply']");
-				CustomWait.hardWait(1000);
-				driver.navigate().refresh();
+				CustomWait.hardWait(8000);
+				
 			}
 		}
 		/*
