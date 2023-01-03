@@ -1,0 +1,9 @@
+app\GUI.class
+lib\GetProp.class
+lib\GETOS.class
+lib\element.class
+lib\MouseAction.class
+lib\LOG.class
+lib\CustomWait.class
+app\MainAPP.class
+lib\RandomG.class
