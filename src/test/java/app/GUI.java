@@ -101,7 +101,8 @@ public class GUI implements ActionListener {
 		try {
 			MainAPP.twitterBOT(userName, pass, tweet, isBackground);
 		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
+			//new comment added
+			//
 			e1.printStackTrace();
 		}
 	}
